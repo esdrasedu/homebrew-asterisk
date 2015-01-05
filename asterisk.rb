@@ -17,6 +17,8 @@ class Asterisk < Formula
   depends_on 'sqlite'
   depends_on 'srtp'
   depends_on 'unixodbc'
+  depends_on 'autoconf'
+  depends_on 'automake'
 
   def install
     openssl = Formula['openssl']
