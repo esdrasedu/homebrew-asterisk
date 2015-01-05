@@ -29,7 +29,9 @@ class Asterisk < Formula
     # Some Asterisk code doesn't follow strict aliasing rules
     ENV["CFLAGS"] = "-fno-strict-aliasing"
     ENV["PKG_CONFIG"] = "/usr/local/bin/pkg-config"
-
+    
+    system "./bootstrap.sh"
+    
     system "./configure", "--prefix=#{prefix}",
                           "--without-netsnmp",
                           "--without-gtk2",
